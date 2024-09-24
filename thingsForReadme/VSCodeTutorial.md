@@ -22,5 +22,5 @@
 <div align=center>
     <img src = "./img/clonegitVSCode2.png" width=800px>
 </div>
-
+<br><br><br><br>
 Após ter selecionado o "Clone from URL", ele irá pedir o local para onde clonar o arquivo. Escolha-o e abra a pasta com o VSCode.
