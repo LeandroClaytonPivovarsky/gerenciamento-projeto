@@ -29,4 +29,9 @@ O Github foi implementado como uma ferramenta base no VSCode, facilitando o proc
 Após ter selecionado o "Clone from URL", ele irá pedir o local para onde clonar o arquivo. Após escolhido, abra a pasta com o VSCode.
 
 
-<p><a href = "https://github.com/LeandroClaytonPivovarsky/gerenciamento-projeto">Clique aqui para voltar a página inicial do projeto quando concluido</a></p>
+<p>
+    <a href = "https://github.com/LeandroClaytonPivovarsky/gerenciamento-projeto">
+        Clique aqui
+    </a> 
+    para voltar a página inicial do projeto quando concluido
+</p>
