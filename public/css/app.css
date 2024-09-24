@@ -1,0 +1,35 @@
+.botoes{
+    display: flex;
+    gap: 2rem;
+}
+
+.imagem{
+    width: 20rem;
+    height: 20rem;
+
+}
+
+.conteudoPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.botaoSite{
+    size: 2rem;
+}
+
+.Client{
+    background-color: gray;
+}
+
+.Selected{
+    pointer-events: none;
+}
+
+
+.btn{
+    flex-wrap: nowrap;
+}
