@@ -1,6 +1,6 @@
 <h2>Como clonar o projeto a partir do VSCode(Visual Studio Code)</h2>
 
-O Github foi implementado como uma ferramenta base no VSCode, facilitando o processo de clonagem, siga os passos abaixo e não terá problema em clonar o projeto:
+O Github foi implementado como uma ferramenta base no VSCode, facilitando o processo de clonagem. Siga os passos abaixo e não terá problema em clonar o projeto:
 
 
 - <h4>Clique no botão conforme mostra a imagem:</h4>
