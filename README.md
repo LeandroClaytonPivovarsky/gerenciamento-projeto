@@ -6,7 +6,7 @@ Código em desenvolvimento com objetivo de gerar um aplicativo capaz de gerencia
 - <a href="https://getcomposer.org/download/">Composer</a>
 - <a href="https://sourceforge.net/projects/xampp/files/">Xampp(com PHP 8.2) para Windows</a>
 - <a href = "https://ubuntu.com/server/docs/how-to-install-and-configure-php"> PHP(Ubuntu apenas)</a>
-<p>O Laravel será instalado através do gerenciador de dependências(Composer)</p>
+<p>O Laravel será instalado através do gerenciador de dependências(Composer), lembrando que este projeto está sendo desenvolvido em Laravel 11</p>
 
 <br/>
 

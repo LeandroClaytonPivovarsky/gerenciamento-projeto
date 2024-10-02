@@ -10,6 +10,7 @@ use App\Repositories\RoleRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -24,7 +25,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        
+        $this->authorize('');
         $data= $this->repository->returnAll((object) ["use" => false]);
         return $data;
     }
@@ -34,7 +35,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
