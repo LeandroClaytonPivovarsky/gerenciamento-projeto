@@ -12,18 +12,18 @@
         @csrf
         <!-- Email Address -->
         <div class="w-75 mx-auto mt-4">
-            <x-textbox name="email" label="Login/Email" type="email" :value="old('email')" disabled="false"/>
+            <x-textbox name="email" label="Login/Email" type="email" :value="old('email')" disabled="false" id=""/>
         </div>
 
         <!-- Password -->
         <div class="w-75 mx-auto">
-            <x-textbox name="password" label="Senha" type="password" value="null" disabled="false"/>
+            <x-textbox name="password" label="Senha" type="password" value="null" disabled="false" id=""/>
         </div>
 
         <div class="row w-75 mx-auto">
             @if (Route::has('password.request'))
                 <div class="col">
-                    <x-button label="Recuperar Senha" type="link" route="password.request" color="secondary"/>
+                    <x-button label="Recuperar Senha" type="link" route="password.request" color="secondary" id=""/>
                 </div>
             @endif
 

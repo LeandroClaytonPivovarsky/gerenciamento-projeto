@@ -17,7 +17,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/site/register', 'App\Http\Controllers\ClientController@register')->name('site.register');
+Route::get('/registerClient', 'App\Http\Controllers\ClientController@register')->name('registerClient');
 
 Route::get('/site/success', 'App\Http\Controllers\ClientController@storeRegister')->name('site.submit');
 

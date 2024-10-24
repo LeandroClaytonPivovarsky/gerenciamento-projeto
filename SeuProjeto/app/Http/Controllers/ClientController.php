@@ -35,7 +35,12 @@ class ClientController extends Controller
      */
     public function create()
     {
-        
+
+    }
+
+    public function register()
+    {
+        return view('client.register');
     }
 
     /**
