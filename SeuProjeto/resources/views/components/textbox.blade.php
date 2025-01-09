@@ -21,7 +21,7 @@
                         accept="application/pdf, image/gif, image/jpeg"
                     @endif
                 />
-                @if($type != "file") <label for="{{$name}}">{{$label}}</label> @endif
+                @if($type != "file") <label for="{{$name}}" id="{{$id}}"">{{$label}}</label> @endif
                 @if($errors->has($name))
                     <div class='invalid-feedback'>
                         {{ $errors->first($name) }}
