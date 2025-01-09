@@ -10,10 +10,12 @@ use App\Repositories\RoleRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ClientController extends Controller
 {
+
+    use AuthorizesRequests;
 
     protected $repository;
 
@@ -25,7 +27,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $this->authorize('');
+        $this->authorize('hasFullPermission', Client::class);
         $data= $this->repository->returnAll((object) ["use" => false]);
         return $data;
     }
