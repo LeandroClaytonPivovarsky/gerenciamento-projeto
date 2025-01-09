@@ -12,7 +12,7 @@
         @csrf
         <!-- Email Address -->
         <div class="w-75 mx-auto mt-4">
-            <x-textbox name="email" label="CPF/CNPJ" type="email" :value="old('email')" disabled="false"/>
+            <x-textbox name="email" label="Email" type="email" :value="old('email')" disabled="false"/>
         </div>
 
         <!-- Password -->

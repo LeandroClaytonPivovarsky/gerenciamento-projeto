@@ -17,8 +17,11 @@ class AuthenticatedSessionController extends Controller
     public function create($id): View
     {
         if ($id == 'U') {
+
+            
             return view('auth.login.user');
         }
+
 
         return view('auth.login.client');
         
@@ -29,11 +32,16 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        if ($request->session()->has('url.intended')) {
+            return redirect()->intended();
+        }
+
+        return redirect()->route('home');
     }
 
     /**
