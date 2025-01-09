@@ -1,5 +1,5 @@
 @extends('templates.head')
-@section('body')
+@section('header')
 
 <header class="d-flex flex-wrap align-items-center justify-content-start py-3 mb-4 border-bottom">
     <a href="{{route('site')}}" class="
@@ -17,9 +17,17 @@
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 mb-md-0 d-flex flex-grow-1 justify-content-around align-content-center">
-            <li><a href="{{route('project.index')}}" class="nav-link px-2 link-dark">Projetos</a></li>
+        @can('hasFullPermission', App\Models\Project::class)
+        <li><a href="{{route('projects.index')}}" class="nav-link px-2 link-dark">Projetos</a></li>
+        @endcan
+
+        @can('hasFullPermission', App\Models\User::class)
             <li><a href="#" class="nav-link px-2 link-dark">Usuários</a></li>
+        @endcan
+
+        @can('hasFullPermission', App\Models\Client::class)
             <li><a href="#" class="nav-link px-2 link-dark">Clientes</a></li>
+        @endcan
 
     </ul>
 </header>

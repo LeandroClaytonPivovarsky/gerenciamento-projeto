@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\Task;
 use App\Repositories\ProjectRepository;
 use App\Repositories\TaskRepository;
 use App\Repositories\UserRepository;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+
+    use AuthorizesRequests;
 
     private TaskRepository $repository;
 
@@ -21,6 +25,8 @@ class TaskController extends Controller
      */
     public function index($idProject)
     {
+
+        $this->authorize("HasFullPermission", Task::class);
         return $this->repository->returnAllByProjects(
             $idProject,
         ["use" => true, $this->repository->getRows()]);

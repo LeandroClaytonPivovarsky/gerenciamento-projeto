@@ -15,13 +15,22 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $data = [
+            // LEANDRAO
+            [
+                'role_id' => 1, // Role ID do ADMIN
+                'name' => 'Leandro Clayton Pivovarsky',
+                'email' => 'leandroclaytonp@gmail.com',
+                'login' => 'adminuuario',
+                'password' => Hash::make('admin123'),
+            ],
+            
             // ADMIN
             [
                 'role_id' => 1, // Role ID do ADMIN
                 'name' => 'Admin User',
                 'email' => 'admin@example.com',
                 'login' => 'adminuser',
-                'password' => bcrypt('adminpassword'),
+                'password' => Hash::make('adminpassword'),
             ],
             // WORKER
             [
@@ -29,7 +38,7 @@ class UserSeeder extends Seeder
                 'name' => 'Worker User',
                 'email' => 'worker@example.com',
                 'login' => 'workeruser',
-                'password' => bcrypt('workerpassword'),
+                'password' => Hash::make('workerpassword'),
             ],
             // CLIENT
             [
@@ -37,7 +46,7 @@ class UserSeeder extends Seeder
                 'name' => 'Client User',
                 'email' => 'client@example.com',
                 'login' => 'clientuser',
-                'password' => bcrypt('clientpassword'),
+                'password' => Hash::make('clientpassword'),
             ],
         ];
         DB::table('users')->insert($data);

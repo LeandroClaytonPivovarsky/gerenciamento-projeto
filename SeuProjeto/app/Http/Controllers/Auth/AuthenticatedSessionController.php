@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Facade\Permissions;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\RedirectResponse;
@@ -32,10 +33,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-
         $request->authenticate();
-
+        
         $request->session()->regenerate();
+
+        Permissions::loadPermissions(Auth::user()->role_id);
 
         if ($request->session()->has('url.intended')) {
             return redirect()->intended();

@@ -8,7 +8,7 @@
     </span>
     
     <x-auth-session-status class="mt-4" :status="session('status')" />
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('logar') }}">
         @csrf
         <!-- Email Address -->
         <div class="w-75 mx-auto mt-4">

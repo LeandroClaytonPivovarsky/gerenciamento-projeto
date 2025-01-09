@@ -6,11 +6,11 @@ use App\Models\Client;
 use App\Models\Project;
 use App\Repositories\ClientRepository;
 use App\Repositories\ProjectRepository;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class ProjectController extends Controller
 {
+    use AuthorizesRequests;
 
     protected $repository;
 
@@ -22,7 +22,14 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return $this->repository->returnAll((object) ["use" => false]);
+
+        $this->authorize('hasFullPermission', Project::class);
+        $data = $this->repository->returnAll(
+            (object) ["use" => false, "rows" => 0]
+    );
+        return view('project.index', compact('data'));
+    
+
     }
 
     /**

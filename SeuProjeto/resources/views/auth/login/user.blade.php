@@ -28,7 +28,7 @@
             @endif
 
             <div class="col">
-                <x-button label="Entrar" type="submit" route="login" color="success"/>
+                <x-button label="Entrar" type="submit" route="" color="success"/>
             </div>
         </div>
     </form>

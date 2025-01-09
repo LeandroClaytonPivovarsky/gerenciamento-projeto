@@ -17,7 +17,7 @@ class Permission extends Model{
     }
 
     public function resource(){
-        return $this->belongsToMany(Resource::class);
+        return $this->belongsTo(Resource::class);
     }
 
 }

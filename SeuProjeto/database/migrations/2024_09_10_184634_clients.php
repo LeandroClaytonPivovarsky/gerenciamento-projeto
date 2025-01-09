@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('cnpj')->nullable();
             $table->string('email');
             $table->string('password');
-            $table->foreign('user_id')->references('id')->on('users');
+            //$table->foreign('user_id')->references('id')->on('users');
             $table->softDeletes();
             $table->timestamps();
 
